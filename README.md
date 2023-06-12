@@ -1,5 +1,34 @@
 # Gabeogatchi
 
+
+# OH NO IM LOST HOW DO I CONNECT?
+```
+Hi!
+
+You've been selected to be a beta tester for the gabeogatchi game!
+
+The game have several features that are currently with placeholder values, but all key features (and more!) work to the basest extent!
+
+To access the website, head to:
+
+You will be prompted for a username and password. We have given you a super special account with unlimited funds! This account is accessed by referring to the information in the .txt file attached to the assesment!
+
+Should any unexpected errors occur, be sure to raise an issue at the github. Ultra small or Ultra Large screens may need to somewhat adjust their zoom when playing the demo.
+
+You can access the source code HERE: https://github.com/sillylittlerobots/GabeogatchiSubmission
+
+Keep in mind, all commits and all are timestamped, so you can access when any code was last changed (to assure assessment equity).
+
+Thank you for testing and have fun!
+
+```
+
+
+
+
+
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.1.
 
 ## Development server
