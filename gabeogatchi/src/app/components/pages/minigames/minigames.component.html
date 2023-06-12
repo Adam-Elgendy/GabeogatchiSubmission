@@ -1,0 +1,27 @@
+<div class="component-container">
+    <div class="window-container" *ngIf="displayedGame == 'none'">
+        <h1 class="centered-text">Games</h1>
+        <div class="list-container">
+            <div class="list-item" *ngFor="let game of gamesList" (click)="openGame(game.slug)">
+                <div class="list-thumbnail-container">
+                    <img src="{{game.imgLink}}" alt="" class="list-thumbnail">
+                </div>
+                <div class="list-item-text">
+                    <h2 class="list-title">{{game.title}}</h2>
+                    <p class="list-subtitle">{{game.description}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="game-container" *ngIf="displayedGame=='tetris'">
+        <game-board></game-board>
+    </div>
+
+    <div class="exit-container" *ngIf="displayedGame != 'none'">
+        <img src="https://www.svgrepo.com/show/506172/cross.svg" alt="" class="exit-img" (click)="openGame('none')">
+    </div>
+    
+    <div class="bar-container">
+        <app-bottom-bar currentPage="games"></app-bottom-bar>
+    </div>
+</div>

@@ -1,0 +1,90 @@
+<div class="grid">
+    <canvas #board class="game-board"></canvas>
+        <div>
+            <h1>TETRIS</h1>
+            <p>Score: {{ points }}</p>
+            <p>Lines: {{ lines }}</p>
+            <p>Level: {{ level }}</p>
+            <p>High Score: {{ highScore }}</p>
+            <p>Next Block:</p>
+            <canvas #next class="next"></canvas>
+        <div class="button-container">
+            <button
+                (click)="play()"
+                class="play-button button"
+                *ngIf="!gameStarted"
+            >
+                Play
+            </button>
+            <button
+                (click)="gameOver()"
+                class="reset-button button"
+                *ngIf="gameStarted"
+            >
+                Reset
+            </button>
+            <button
+                (click)="pause()"
+                class="pause-button button"
+                [class.button-disabled]="!gameStarted"
+            >
+                Pause
+            </button>
+        </div>
+    </div>
+</div>
+
+<style>
+    /* You can add global styles to this file, and also import other style files */
+* {
+    font-family: "Oxygen";
+}
+
+.grid {
+  transform: scale(.8);
+  display: flex;
+  grid-template-columns: 240px 150px;
+}
+
+.right-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+  width: 150px;
+}
+.button-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+
+  .play-button {
+    background-color: #4caf50;
+  }
+
+  .reset-button {
+    background-color: red;
+  }
+
+  .pause-button {
+    background-color: #4caf50;
+
+    &.button-disabled {
+      background-color: #cccccc;
+    }
+  }
+
+  .button {
+    font-size: 12px;
+    padding: 11px 22px;
+    cursor: pointer;
+    width: 105px; 
+    border: 1px solid black;
+  }
+}
+
+.game-board {
+  border: solid 2px #fff;
+}
+
+
+</style>

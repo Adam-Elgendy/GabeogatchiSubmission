@@ -1,0 +1,21 @@
+<div class="component-container">
+    <div class="window-container">
+        <h1 class="centered-text">Your Stuff</h1>
+        <div class="list-container">
+            <div class="list-item inventory-item" *ngFor="let item of inventory" (click)="openElem(item)">
+                <div class="list-thumbnail-container">
+                    <img src="{{item.imgLink}}" alt="" class="list-thumbnail">
+                </div>
+                <div class="list-item-text">
+                    <h2>{{item.title}}</h2>
+                    <p>{{item.subtitle}}</p>
+                </div>
+            </div>
+        </div>
+        <p *ngIf="inventory.length == 0" class="centered-text">There is nothing here :(</p>
+    </div>
+
+    <div class="bar-container">
+        <app-bottom-bar currentPage="inventory"></app-bottom-bar>
+    </div>
+</div>

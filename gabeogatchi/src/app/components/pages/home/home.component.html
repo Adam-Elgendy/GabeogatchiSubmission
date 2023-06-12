@@ -1,0 +1,20 @@
+<div *ngIf="!pet.living">
+    <app-create-pet></app-create-pet>
+</div>
+<div class="component-container">
+    <div class="room-container">
+        <div class="pet-status-container">
+            <app-pet-status></app-pet-status>
+        </div>
+        <div class="pet-status-container">
+            <app-pet-display></app-pet-display>
+        </div>
+        <div class="pet-status-container">
+            <app-pet-buttons ></app-pet-buttons>
+        </div>
+    </div>
+
+    <div class="bar-container">
+        <app-bottom-bar currentPage="home"></app-bottom-bar>
+    </div>
+</div>

@@ -1,0 +1,38 @@
+<div class="component-container">
+    <h1 class="centered-text">Open Your Gacha here!</h1>
+    <div class="gacha-container" (click)="pullGacha()">
+        <img src="https://media.istockphoto.com/id/603904698/vector/colorful-bubblegum-gumball-machine.jpg?s=612x612&w=0&k=20&c=ohF_YoN4Y-qD0Zpes_AELRrTPohtkISB5xL2MZnd5mc=" alt="" class="gacha-img">
+    </div>
+</div>
+
+<div class="status-container" *ngIf="currentPageState != pageState.idle || pullItem != null">
+    <div class="status-window">
+        <div class="status-content" *ngIf="currentPageState == pageState.loading">
+            <h1 class="centered-text status-text">Loading...</h1>
+            <div class="status-loading">
+                <app-loading></app-loading>
+            </div>
+        </div>
+        <div class="status-content" *ngIf="pullItem != null">
+            <h1 class="centered-text status-text">Congratulations! You Win</h1>
+            <div class="win-card">
+                <img src="{{pullItem.imgLink}}" alt="" class="win-img centered">
+                <h3 class="centered-text win-text">{{pullItem.title}}</h3>
+            </div>
+            <div class="status-button">
+                <app-submit-button [buttonText]="'Claim'" [buttonState]="pageState.idle" (onClick)="router.navigateByUrl('/inventory')"></app-submit-button>
+            </div>
+        </div>
+        <div class="status-content" *ngIf="currentPageState == pageState.error || currentPageState == pageState.success">
+            <h1 class="centered-text status-text" *ngIf="currentPageState == pageState.error">Ooops</h1>
+            <h1 class="centered-text status-text" *ngIf="currentPageState == pageState.success">Hooray</h1>
+            <p class="centered-text">{{pageText}}</p>
+            <div class="status-button">
+                <app-submit-button *ngIf="pageText == 'You do not have a gacha pod at the moment, unlock one from the store'" 
+                [buttonText]="'Ok'" [buttonState]="pageState.idle" (onClick)="router.navigateByUrl('/')"></app-submit-button>
+                <app-submit-button *ngIf="pageText != 'You do not have a gacha pod at the moment, unlock one from the store'" 
+                [buttonText]="'Ok'" [buttonState]="pageState.idle" (onClick)="currentPageState = pageState.idle"></app-submit-button>
+            </div>
+        </div>
+    </div>
+</div>

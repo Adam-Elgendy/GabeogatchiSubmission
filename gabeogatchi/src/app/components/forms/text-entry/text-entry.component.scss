@@ -1,0 +1,20 @@
+.entry{
+    width: 100%;
+    height: 100%;
+
+    font-size: 1.5rem;
+    border-radius: 15px;
+    border:  2px #fff solid;
+
+    background: linear-gradient(to right, var(--attention-color) 49%, rgba(#fff, 0) 50%);
+    background-size: 200%;
+    background-position: 100% 0%;
+    
+    
+    transition: all 0.5s ease;
+    
+}
+
+.entry:focus{
+    background-position: 0% 0%;
+}

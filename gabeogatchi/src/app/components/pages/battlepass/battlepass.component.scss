@@ -1,0 +1,67 @@
+.battlepass{
+    &-container{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        margin-top: 5px;
+    }
+    &-column{
+        width: 100%;
+        
+
+        &-free{
+            border-right: 3px #fff solid;
+        }
+    }
+
+    &-item{
+        width: 80%;
+        aspect-ratio: 4/1;
+        margin: auto;
+        height: auto;
+        border: 5px var(--attention-color) solid;
+        border-radius: 30px;
+        transition: all 0.5s ease;
+        margin-bottom: 10px;
+        background: var(--neutral-color);
+
+        &-completed{
+            background-color: var(--secondary-color);
+        }
+        &-premium{
+            width: 30%;
+            aspect-ratio: 1/1;
+            transform: rotate(45deg);
+            margin-top: 50px;
+            margin-bottom: 50px;
+            display: grid;
+            place-items: center;
+            &-inner{
+                transform: rotate(-45deg);
+            }
+        }
+
+        &-points{
+            background-color: rgba($color: #000000, $alpha: 0.4);
+            width: fit-content;
+            padding: 5px;
+            border-radius: 15px;
+            margin: auto;
+            margin-top: 15px;
+        }
+    }
+
+    &-item:hover{
+        cursor: pointer;
+        transform: translate(-10px, -10px);
+        &-premium{
+            transform: translate(-10px, -10px) rotate(45deg) !important;
+        }
+    }
+    &-item-premium:hover{
+        cursor: pointer;
+        transform: translate(-15px, -15px) rotate(45deg) !important;
+    }
+}
+

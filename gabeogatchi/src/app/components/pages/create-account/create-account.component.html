@@ -1,0 +1,24 @@
+<div class="component-container">
+    <div class="centered form-container">
+        <h1 class="centered-text">
+            Welcome! Please make an Account
+        </h1>
+            <form class="centered form-wrapper" (submit)="validateAuth(userNameEntry.value, passwordEntry.value, $event)">
+            <p>Email</p>
+            <div class="entry-container">
+                <app-text-entry #userNameEntry></app-text-entry>
+            </div>
+            <p>Password</p>
+            <div class="entry-container">
+                <app-text-entry inputType="password" #passwordEntry></app-text-entry>
+            </div>
+            <div class="centered submit-container">
+                <app-submit-button buttonText="Create" [buttonState]=formState (onClick)="validateAuth(userNameEntry.value, passwordEntry.value, $event)"></app-submit-button>
+            </div>
+        </form>
+        <div class="centered error-container" [ngClass]="{'hidden': formState != pageState.error}">
+            <h3 class="error-text">Oopsie!</h3>
+            <p class="error-text">This email is already registered with Gabeogatchi</p>
+        </div>
+    </div>
+</div>

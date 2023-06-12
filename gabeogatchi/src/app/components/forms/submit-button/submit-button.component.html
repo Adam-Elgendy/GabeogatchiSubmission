@@ -1,0 +1,6 @@
+<div class="component-container">
+    <button class="btn" (click)="getClick($event)">
+        <p *ngIf="buttonState == possibleStates.idle || buttonState == possibleStates.error" class="btn-elem">{{buttonText}}</p>
+        <app-loading *ngIf="buttonState == possibleStates.loading" class="btn-elem"></app-loading> 
+    </button>
+</div>

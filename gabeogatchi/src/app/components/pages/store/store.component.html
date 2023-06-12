@@ -1,0 +1,40 @@
+<div class="component-container">
+    <div class="window-container store-container">
+        <h1 class="centered centered-text">Store</h1>
+        <h2 class="centered centered-text" style="margin-bottom: 15px;">Your Funds: {{funds}}</h2>
+        <div class="store-list">
+            <div class="store-item" *ngFor="let item of storeItems" (click)="buyItem(item)">
+                <div class="store-item-thumbnail store-item-thumbnail-left">
+                    <img class="store-item-thumbnail-img" src="{{item.imgLink}}" alt="">
+                </div>
+                <div class="store-item-text">
+                    <h2>{{item.title}} - <strong>{{item.cost}}</strong></h2>
+                    <p>{{item.subtitle}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bar-container">
+        <app-bottom-bar currentPage="store"></app-bottom-bar>
+    </div>
+</div>
+
+<div class="status-container" *ngIf="currentPageState != pageState.idle">
+    <div class="status-window">
+        <div class="status-content" *ngIf="currentPageState == pageState.loading">
+            <h1 class="centered-text">Loading...</h1>
+            <div class="status-loading">
+                <app-loading></app-loading>
+            </div>
+        </div>
+        <div class="status-content" *ngIf="currentPageState == pageState.error || currentPageState == pageState.success">
+            <h1 class="centered-text" *ngIf="currentPageState == pageState.error">Ooops</h1>
+            <h1 class="centered-text" *ngIf="currentPageState == pageState.success">Hooray</h1>
+            <p class="centered-text">{{pageText}}</p>
+            <div class="status-button">
+                <app-submit-button [buttonText]="'Ok'" [buttonState]="pageState.idle" (onClick)="currentPageState = pageState.idle"></app-submit-button>
+            </div>
+        </div>
+    </div>
+</div>

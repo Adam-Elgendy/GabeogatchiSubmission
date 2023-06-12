@@ -1,0 +1,34 @@
+<div class="component-container">
+    <div class="bar">
+        <div class="bar-elem" id="battlepass" 
+        [ngClass]="{'bar-elem-active': currentPage=='battlepass'}"
+        (click)="setPage('battlepass')"
+        >
+            <img src="https://www.svgrepo.com/show/390356/badge-reward-medal.svg" alt="" class="bar-img">
+        </div>
+        <div class="bar-elem" id="battlepass" 
+        [ngClass]="{'bar-elem-active': currentPage=='store'}"
+        (click)="setPage('store')"
+        >
+            <img src="https://www.svgrepo.com/show/390191/store-shop.svg" alt="" class="bar-img">
+        </div>
+        <div class="bar-elem" id="home" 
+        [ngClass]="{'bar-elem-active': currentPage=='home'}"
+        (click)="setPage('home')"
+        >
+            <img src="https://www.svgrepo.com/show/500894/home.svg" alt="" class="bar-img">
+        </div>
+        <div class="bar-elem" id="games" 
+        [ngClass]="{'bar-elem-active': currentPage=='games'}"
+        (click)="setPage('games')"
+        >
+        <img src="https://www.svgrepo.com/show/385162/joystick-videogame-controller.svg" alt="" class="bar-img">
+    </div>
+    <div class="bar-elem" id="games" 
+    [ngClass]="{'bar-elem-active': currentPage=='inventory'}"
+    (click)="setPage('inventory')"
+    >
+    <img src="https://www.svgrepo.com/show/485909/suitcase.svg" alt="" class="bar-img">
+</div>
+    </div>
+</div>

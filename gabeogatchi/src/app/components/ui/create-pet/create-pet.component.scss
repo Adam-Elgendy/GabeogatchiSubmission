@@ -1,0 +1,30 @@
+pets{
+    &-container{
+        width: 80%;
+        height: 20%;
+        // aspect-ratio: 5/2;
+        background-color: red;
+        border-color: red;
+        display: flex;
+        flex-direction: row;
+    }
+    &-sprite{
+        width:10%;
+        aspect-ratio: 3/4
+
+        img{
+            object-fit: scale-down;
+        }
+    }
+
+}
+
+.row {
+    display: flex;
+  }
+  
+  .column {
+    flex: 33.33%;
+    padding: 5px;
+  }
+

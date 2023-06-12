@@ -1,0 +1,14 @@
+<div class="status-container">
+    <div class="status-window">
+        <div class="status-content">
+            <h3 class="centered-text status-text">Create Pet</h3>
+                <div class="status-text">
+                    <p>Name</p>
+                    <app-text-entry #petName></app-text-entry>
+                </div>
+                <div class="centered submit-container">
+                    <app-submit-button [buttonText]="'Create'" [buttonState]="pageState.idle" (click)= "submitPet(petName.value)"></app-submit-button>
+                </div>
+        </div>
+    </div>
+</div>

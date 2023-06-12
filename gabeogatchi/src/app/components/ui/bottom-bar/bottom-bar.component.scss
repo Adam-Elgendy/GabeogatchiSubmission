@@ -1,0 +1,43 @@
+.component-container{
+  width: 100vw;
+  height: 15vh;
+  padding-bottom: 15px;
+
+  background-color: var(--secondary-color);
+}
+
+.bar{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+
+  &-elem{
+      margin-top: 10px;
+      height: 10vh;
+      aspect-ratio: 1/1;
+      border: 10px var(--attention-color) solid;
+      border-radius: 100%;
+      transition: all 0.25s ease;
+
+      cursor: pointer;
+
+      display: grid;
+      place-items: center;
+
+      &-active{
+          transform: scale(1.5);
+          margin-top: -20px;
+          background: var(--attention-color);
+      }
+  }
+  &-img{
+    aspect-ratio: 1/1;
+    width: 65%;
+    filter: invert(100%) sepia(83%) saturate(697%) hue-rotate(294deg) brightness(125%) contrast(105%);
+    height: auto;
+  }
+  &-text{
+      font-size: 1rem;
+  }
+}
