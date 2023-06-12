@@ -5,7 +5,7 @@
 ```
 Hi!
 
-You've been selected to be a beta tester for the gabeogatchi game!
+You've been selected to be a beta tester for the Gabeogatchi game!
 
 The game have several features that are currently with placeholder values, but all key features (and more!) work to the basest extent!
 
