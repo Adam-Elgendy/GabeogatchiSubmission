@@ -9,7 +9,7 @@ You've been selected to be a beta tester for the gabeogatchi game!
 
 The game have several features that are currently with placeholder values, but all key features (and more!) work to the basest extent!
 
-To access the website, head to:
+To access the website, head to: https://sillylittlerobots.github.io/GabeogatchiSubmission/
 
 You will be prompted for a username and password. We have given you a super special account with unlimited funds! This account is accessed by referring to the information in the .txt file attached to the assesment!
 
